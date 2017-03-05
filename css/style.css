@@ -80,9 +80,26 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
     font-weight: bold;
 }
+
+.navbar-blue {
+    background-color: #0D72A6 !important;
+}
+
+.navbar-green {
+    background-color: #4B9121 !important;
+}
+
+.navbar-blugreen {
+   background-color: #307952 !important; 
+}
+
+/*.navbar-blue .navbar-blugreen .navbar-green {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}*/
 
 .navbar-brand img{
     height:100px;
@@ -147,15 +164,14 @@ a:focus {
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
+        -moz-transition: background .3s ease-in-out,padding .3s ease-in-out;
+        transition: background .3s ease-in-out,padding .3s ease-in-out;
     }
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
     }
 }
 
@@ -171,11 +187,35 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    padding-bottom: 5em !important;
+}
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 100%!important;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+.btn-circle:hover {
+    color: white;
+    padding-bottom: -3px;
+    font-size: 50px;
+     -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
 }
 
 .intro .intro-body {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 .intro .intro-body .brand-heading {
@@ -230,6 +270,8 @@ section{
 
 .services img{
     height:90%;
+    width: auto;
+    max-width: 200%;
 }
 
 .services h4{
@@ -328,7 +370,9 @@ ul.banner-social-buttons {
 }
 
 .communities img{
-    height:500px;
+    height:90%;
+    width: auto;
+    max-width: 200%;
 }
 
 .communities ul{
@@ -396,7 +440,7 @@ body {
 .pagination-custom a .hover-text {
 	position:absolute;
 	right:15px;
-	top:7px;
+    top: -2px;
 	opacity:0;
 	-webkit-transition: opacity 0.5s ease;
 	transition: opacity 0.5s ease;
@@ -419,6 +463,10 @@ body {
 	top:0;
 	right:4px;
 	bottom:0;
+}
+
+.hover-text {
+    font-size: 15px !important;
 }
 
 ul {

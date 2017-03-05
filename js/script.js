@@ -5,15 +5,41 @@
  */
 
 // Navbar smooth scroll
+var previousColor;
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        setNavBarClass();
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
 }
+
+function setNavBarClass() {
+    var section = location.hash;
+    console.log(section);
+    if (previousColor) {
+        $(".navbar-fixed-top").removeClass(previousColor);
+    }
+    switch (section) {
+        case "#services":
+            console.log("services");
+            $(".navbar-fixed-top").addClass("navbar-green");
+            previousColor="navbar-green";
+            break;
+        case "#communities":
+            $(".navbar-fixed-top").addClass("navbar-blue");
+            previousColor = "navbar-blue";
+            break;
+        case "#team":
+            $(".navbar-fixed-top").addClass("navbar-blugreen");
+            previousColor = "navbar-blugreen";
+            break;
+    } 
+}
 // Scrolling page -> jQuery Easing plugin
-$(function (collapseNavbar) {
+$(function () {
+    collapseNavbar();
     $(window).scroll(collapseNavbar);
     // Responsive Menu
     $('.navbar-collapse ul li a').click(function () {
@@ -24,10 +50,11 @@ $(function (collapseNavbar) {
     $.scrollify({
         section: ".section",
         scrollbars: false,
+        scrollSpeed: 700,
         before: function (i, sections) {
             var ref = sections[i].attr("data-section-name");
-            $(".pagination .active").removeClass("active");
-            $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+            $(".pagination-custom .active").removeClass("active");
+            $(".pagination-custom").find("a[href=\"#" + ref + "\"]").addClass("active");
         },
         afterRender: function () {
             var pagination = "<ul class=\"pagination\">";
@@ -47,10 +74,7 @@ $(function (collapseNavbar) {
         event.preventDefault();
         $.scrollify.next();
     });
-    $(".pagination a").on("click", function(){
-        console.log('pagination clicked');
-        $.scrollify.move();
-    });
+    $(".pagination-custom a").on("click", $.scrollify.move);
 });
 
 
