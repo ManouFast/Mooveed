@@ -17,13 +17,11 @@ function collapseNavbar() {
 
 function setNavBarClass() {
     var section = location.hash;
-    console.log(section);
     if (previousColor) {
         $(".navbar-fixed-top").removeClass(previousColor);
     }
     switch (section) {
         case "#services":
-            console.log("services");
             $(".navbar-fixed-top").addClass("navbar-green");
             previousColor="navbar-green";
             break;
