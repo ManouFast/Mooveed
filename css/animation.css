@@ -1,0 +1,61 @@
+@keyframes updown {
+    50% {
+        transform: translateY(20%);
+    }
+}
+@-webkit-keyframes updown {
+    50% {
+        transform: translateY(20%);
+    }
+}
+@-moz-keyframes updown {
+    50% {
+        transform: translateY(20%);
+    }
+}
+#MongolfiereBis {
+    animation: updown 3s ease infinite;
+}
+
+#MongolFiere1 {
+    animation: updown 5s ease infinite;
+}
+
+.nuage { 
+    -webkit-animation: animateCloud 10s linear infinite;
+	-moz-animation: animateCloud 10s linear infinite;
+	animation: animateCloud 10s linear infinite;
+	
+	-webkit-transform: scale(0.65);
+	-moz-transform: scale(0.65);
+	transform: scale(0.65);
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+    0% {
+        transform: translateX(-1000px)
+    }
+    100% {
+        transform: translateX(200%)
+    }
+}
+
+@-moz-keyframes animateCloud {
+    0% {
+        transform: translateX(-1000px)
+    }
+    100% {
+        transform: translateX(200%)
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        transform: translateX(-1000px)
+    }
+    100% {
+        transform: translateX(200%)
+    }
+}

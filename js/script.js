@@ -47,31 +47,18 @@ $(function () {
     });
     $.scrollify({
         section: ".section",
-        scrollbars: false,
+        scrollbars: true,
         scrollSpeed: 700,
         standardScrollElements: ".team-container",
         before: function (i, sections) {
+            console.log(i);
             var ref = sections[i].attr("data-section-name");
             $(".pagination-custom .active").removeClass("active");
             $(".pagination-custom").find("a[href=\"#" + ref + "\"]").addClass("active");
         },
-        afterRender: function () {
-            var pagination = "<ul class=\"pagination\">";
-            var activeClass = "";
-            $(".section").each(function (i) {
-                activeClass = "";
-                if (i === 0) {
-                    activeClass = "active";
-                }
-                pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-            });
-            pagination += "</ul>";
-            $("#home").append(pagination);
+        afterResize: function (lol, mdr) {
+            $.scrollify.update();
         }
-    });
-    $('a.page-scroll').bind('click', function (event) {
-        event.preventDefault();
-        $.scrollify.next();
     });
     $(".pagination-custom a").on("click", $.scrollify.move);
 });

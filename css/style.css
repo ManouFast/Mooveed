@@ -254,128 +254,67 @@ section ul li{
     list-style-type: none;
     font-size: 30px;
 }*/
-
-section{
-    color: white;
-}
 .section {
     position: relative;
-    
-}
-.services {
-    background-color: #62b030;
+    color: white;
     width:100%;
     height: 100%;
 }
-.services-svg{
-    width: 100%;
-    height:100%;
-    text-align: left;
-    background: url(../img/SERVICEWEB.svg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+
+.svg {
+    position: absolute; 
 }
 
-/*.services img{
-    height:90%;
-    width: auto;
-    max-width: 200%;
+.home {
+    background-color: #A1D8E8;
 }
 
-.services h4{
-    margin: 25px 0 5px 0;
+.home .svg {
+    bottom: 0;
 }
 
-.services p::first-letter{
-    font-weight: bold;
-    font-family: serif;
-    font-size: 3.5em;
-    float:left;
-    padding-right: 0.1em;
+.services {
+    background-color: #62b030;
 }
 
-@media(max-width: 767px){
-    .services {
-        padding-bottom: 50px;
-    }
-
-}*/
-
-
-/*.content-section {
-    padding-top: 100px;
-}
-
-
-
-
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-}
-
-.btn {
-    border-radius: 0;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.btn-default {
-    border: 1px solid #ecf0f1;
-    background-color: #ecf0f1;
-    color:#4183D7;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #4183D7;
-    outline: 0;
-    color: #ecf0f1;
-    background-color: #4183D7;
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-}*/
-
-
-
-.communities{
-    width: 100%;
+.desktop-services {
+    position: relative;
     height: 100%;
-    vertical-align: middle;
+    width: 100%;
+}
+.mobile-services img {
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+}
+@media(max-width: 768px) {
+    .desktop-services {
+        display: none;
+    }    
+}
+@media(min-width: 769px) {
+    .mobile-services {
+        display: none;
+    }
+}
+
+@media(min-width: 1670px) and (max-height: 960px) {
+    #MongolFiere1 {
+        transform: translateY(115px);
+    }
+}
+
+.desktop-services img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.communities{
     background-color: #1a92d0;
-    text-align: left;
 }
 
 .team{

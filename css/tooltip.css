@@ -33,59 +33,18 @@
 	bottom: calc(100% - 30px);
 	pointer-events: none;
 }
-
-.tooltip-effect .tooltip-shape {
-/*	-webkit-transform: translate3d(0,-90%,0);
-	transform: translate3d(0,-90%,0);*/
-}
-
 .tooltip:hover .tooltip-shape {
 	pointer-events: auto;
 }
-
 .tooltip-shape svg {
 	stroke: #266242;
 	stroke-width: 4;
 }
-
-/*.tooltip-effect .tooltip-shape svg path {
-	fill: #fff;
-	opacity: 0;
-	-webkit-transform: scale3d(0,0,1);
-	transform: scale3d(0,0,1);
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-}
-
-.tooltip-effect:hover .tooltip-shape svg path {
-	opacity: 1;
-	-webkit-transform: scale3d(1,1,1);
-	transform: scale3d(1,1,1);
-}
-
-.tooltip-effect:hover .tooltip-shape svg path#path2 {
-	-webkit-transition-delay: 0.07s;
-	transition-delay: 0.07s;
-}
-
-.tooltip-effect:hover .tooltip-shape svg path#path3 {
-	-webkit-transition-delay: 0.14s;
-	transition-delay: 0.14s;
-}
-
-.tooltip-effect:hover .tooltip-shape svg path#path4 {
-	-webkit-transition-delay: 0.21s;
-	transition-delay: 0.21s;
-}*/
-
 .tooltip-effect .tooltip-shape svg polygon {
 	fill: transparent;
 	stroke-dasharray: 580;
 	stroke-dashoffset: 580;
 }
-
 .tooltip-effect:hover .tooltip-shape svg polygon {
 	stroke-dashoffset: 0;
 	fill: #fff;
