@@ -37,8 +37,8 @@ function setNavBarClass() {
 }
 // Scrolling page -> jQuery Easing plugin
 $(function () {
-    collapseNavbar();
-    $(window).scroll(collapseNavbar);
+    //collapseNavbar();
+    //$(window).scroll(collapseNavbar);
     // Responsive Menu
     $('.navbar-collapse ul li a').click(function () {
         if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
@@ -49,6 +49,7 @@ $(function () {
         section: ".section",
         scrollbars: false,
         scrollSpeed: 700,
+        standardScrollElements: ".team-container",
         before: function (i, sections) {
             var ref = sections[i].attr("data-section-name");
             $(".pagination-custom .active").removeClass("active");

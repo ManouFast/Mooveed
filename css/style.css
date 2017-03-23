@@ -13,15 +13,14 @@ body {
     width: 100%;
     height: 100%;
     font-family: sans-serif;
-    color: #2c3e50;
-    background-color: #ecf0f1;
+    margin: 0;
 }
 
 html {
     width: 100%;
     height: 100%;
 }
-
+/*
 h1,
 h2,
 h3,
@@ -95,11 +94,11 @@ a:focus {
    background-color: #307952 !important; 
 }
 
-/*.navbar-blue .navbar-blugreen .navbar-green {
+.navbar-blue .navbar-blugreen .navbar-green {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
-}*/
+}
 
 .navbar-brand img{
     height:100px;
@@ -157,7 +156,6 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
     color: #4183D7;
 }
-
 @media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
@@ -181,7 +179,7 @@ a:focus {
     height: auto;
     text-align: center;
     color: #fff;
-    background: url(../img/img_main2.svg) no-repeat bottom center scroll;
+    background: url(../img/headersitevitrine.svg) no-repeat bottom center scroll;
     background-color: #44a472;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -255,20 +253,32 @@ a:focus {
 section ul li{
     list-style-type: none;
     font-size: 30px;
-}
+}*/
 
 section{
     color: white;
 }
-
-.services{
+.section {
+    position: relative;
+    
+}
+.services {
+    background-color: #62b030;
+    width:100%;
+    height: 100%;
+}
+.services-svg{
     width: 100%;
     height:100%;
-    background-color: #62b030;
     text-align: left;
+    background: url(../img/SERVICEWEB.svg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-.services img{
+/*.services img{
     height:90%;
     width: auto;
     max-width: 200%;
@@ -291,10 +301,10 @@ section{
         padding-bottom: 50px;
     }
 
-}
+}*/
 
 
-.content-section {
+/*.content-section {
     padding-top: 100px;
 }
 
@@ -356,42 +366,46 @@ ul.banner-social-buttons {
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
     }
-}
+}*/
 
 
 
 .communities{
     width: 100%;
-    height: 100vh;
-    padding-bottom: 50px;
+    height: 100%;
     vertical-align: middle;
     background-color: #1a92d0;
     text-align: left;
 }
 
-.communities img{
-    height:90%;
-    width: auto;
-    max-width: 200%;
-}
-
-.communities ul{
-    list-style-type: none;
-}
-
-.communities h4{
-    padding: 20px;
-}
-
 .team{
-    width: 100%;
-    height:100vh;
-    vertical-align: middle;
+    width: 100vw;
+    height:100%;
     background-color: #44a572;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.team img{
-    height: 80%;
+.team-container {
+    text-align: center;
+}
+
+@media (max-width: 1490px) {
+    .team-container {
+        padding-top: 10em;
+    }
+}
+.team .tooltip {
+    max-height: 100%;
+    position: relative;
+    width: 300px;
+    padding: 2em;
+    display: inline-table;
+    text-align: center;
+}
+
+.team img {
+    height: 350px;
 }
 
 ::-moz-selection {

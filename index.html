@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mooveed - Travel whitout limits</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/tooltip.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <!--<link rel="icon" type="image/png" href="img/favicon.png"/>-->
 </head>
+<!-- <body data-spy="scroll" data-target=".navbar-fixed-top">-->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<body>
+    <!--<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -28,23 +30,23 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/mooveedtravel/?fref=ts"><img src="img/logo-facebook.png" /></a>
+                        <a target="_blank" href="https://www.facebook.com/bemooveed/?fref=ts"><img src="img/logo-facebook.png" /></a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/mooveedtravel"><img src="img/logo-twitter.png" /></a>
+                        <a target="_blank" href="https://twitter.com/mooveedtravel"><img src="img/logo-twitter.png" /></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/mooveed/"><img src="img/logo-instagram.png" /></a>
+                        <a target="_blank" href="https://www.instagram.com/mooveed/"><img src="img/logo-instagram.png" /></a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            
         </div>
-        <!-- /.container -->
-    </nav>
+        
+    </nav> -->
     <!-- Intro + img_main -->
-    <header class="intro section home" data-section-name="home">
-        <div class="intro-body">
+    <header class="section home" data-section-name="home">
+        <!--<div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-1 col-md-10 col-md-offset-1">
@@ -54,17 +56,22 @@
                     </div>
                 </div>
             </div>
+        </div>-->
+        <div style="background-color: #9FDDED; width: 100%; height: 100%;">
+            <img src="img/logo.png" style="width: 50%; height: auto; margin: auto;  z-index: 999; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+            <object type="image/svg+xml" data="img/headersitevitrine.svg" style="position: absolute; bottom: 0"></object>
         </div>
     </header>
     <!-- Services Section -->
-    <section class="container content-section text-center section services" data-section-name="services">
-       <ul class="pagination-custom">
+    <section class="section services" data-section-name="services">
+        <ul class="pagination-custom">
             <li><a class="" href="#home"><span class="hover-text">Home</span></a></li>
             <li><a class="" href="#services"><span class="hover-text">Services</span></a></li>
             <li><a class="" href="#communities"><span class="hover-text">Communities</span></a></li>
             <li><a class="" href="#team"><span class="hover-text">Team</span></a></li>
         </ul>
-        <div class="col-lg-8 col-lg-offset-2">
+        <object type="image/svg+xml" data="img/SERVICEWEB.svg" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"></object>
+        <!--<div class="col-lg-8 col-lg-offset-2">
             <div class="row">
                 <div class="col-lg-6">
                     <h2>Services </h2>
@@ -78,11 +85,13 @@
                     <img src="img/mockup-iphone.png" alt="mockup iphone" class="img-responsive" />
                 </div>
             </div>
+        </div>-->
+
 
     </section>
     <!-- close about -->
-    <section data-section-name="communities" class="container content-section text-center section communities">
-        <div class="col-lg-8 col-lg-offset-2">
+    <section data-section-name="communities" class="section communities">
+        <!--<div class="col-lg-8 col-lg-offset-2">
             <div class="row">
                 <div class="col-lg-6">
                     <img src="img/mockup-iphone.png" alt="mockup iphone" class="img-responsive" />
@@ -96,32 +105,59 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>-->
+        <object type="image/svg+xml" data="img/COMMUNAUTESITEWEB.svg" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;"></object>
     </section>
     <!-- Team Section -->
-    <section data-section-name="team" class="container content-section text-center section team">
-        <div class="col-lg-8 col-lg-offset-2">
-            <div class="row">
-                <div class="col-lg-3">
-                    <img src="img/jerom.svg" class="img-responsive">
+    <section data-section-name="team" class="section team">
+        <div class="team-container">
+            <div class="tooltip tooltip-effect">
+                <img src="img/jerom.svg">
+                <div class="tooltip-shape">
+                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <svg viewBox="0 0 200 150" preserveAspectRatio="none">
+                        <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
+                        />
+                    </svg>
                 </div>
-                <div class="col-lg-3">
-                    <img src="img/clement.svg" class="img-responsive">
+            </div>
+
+            <div class="tooltip tooltip-effect">
+                <img src="img/maxime.svg">
+                <div class="tooltip-shape">
+                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <svg viewBox="0 0 200 150" preserveAspectRatio="none">
+                        <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
+                        />
+                    </svg>
                 </div>
-                <div class="col-lg-3">
-                    <img src="img/maxime.svg" class="img-responsive">
+            </div>
+            <div class="tooltip tooltip-effect">
+                <img src="img/clement.svg">
+                <div class="tooltip-shape">
+                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <svg viewBox="0 0 200 150" preserveAspectRatio="none">
+                        <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
+                        />
+                    </svg>
                 </div>
-                <div class="col-lg-3">
-                    <img src="img/jb.svg" class="img-responsive">
+            </div>
+            <div class="tooltip tooltip-effect">
+                <img src="img/jb.svg">
+                <div class="tooltip-shape">
+                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <svg viewBox="0 0 200 150" preserveAspectRatio="none">
+                        <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
+                        />
+                    </svg>
                 </div>
             </div>
         </div>
-
     </section>
     <footer>
     </footer>
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="js/jquery.scrollify.min.js"></script>
     <script src="js/script.js"></script>
 </body>
