@@ -23,7 +23,7 @@ function setNavBarClass() {
     switch (section) {
         case "#services":
             $(".navbar-fixed-top").addClass("navbar-green");
-            previousColor="navbar-green";
+            previousColor = "navbar-green";
             break;
         case "#communities":
             $(".navbar-fixed-top").addClass("navbar-blue");
@@ -33,13 +33,21 @@ function setNavBarClass() {
             $(".navbar-fixed-top").addClass("navbar-blugreen");
             previousColor = "navbar-blugreen";
             break;
-    } 
+    }
+}
+var innerPhone = document.getElementById('inner-phone');
+var innerPhoneBox = innerPhone.getBoundingClientRect();
+function resizePhone() {
+    innerPhone = document.getElementById('inner-phone');
+    innerPhoneBox = innerPhone.getBoundingClientRect();
+    $('.phone-logo').css({ top: innerPhoneBox.top + innerPhoneBox.height / 4, left: innerPhoneBox.left, width: innerPhoneBox.width, height: 'auto' });
 }
 // Scrolling page -> jQuery Easing plugin
 $(function () {
     //collapseNavbar();
     //$(window).scroll(collapseNavbar);
     // Responsive Menu
+    //$(window).resize(resizePhone);
     $('.navbar-collapse ul li a').click(function () {
         if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
             $('.navbar-toggle:visible').click();
@@ -59,6 +67,15 @@ $(function () {
         afterResize: function (lol, mdr) {
             $.scrollify.update();
         }
+    });
+    //resizePhone();
+    $('.icone').hover(function () {
+        innerPhone = document.getElementById('inner-phone');
+        innerPhoneBox = innerPhone.getBoundingClientRect();
+        $('#overlay').css({ transition: "1s", top: innerPhoneBox.top, left: innerPhoneBox.left, width: innerPhoneBox.width, height: innerPhoneBox.height });
+    }, function () {
+        console.log('mouseleave icone');
+        $('#overlay').css({ left: innerPhoneBox.left - innerPhoneBox.width, transition: "1s" });
     });
     $(".pagination-custom a").on("click", $.scrollify.move);
 });

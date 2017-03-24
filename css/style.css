@@ -254,6 +254,44 @@ section ul li{
     list-style-type: none;
     font-size: 30px;
 }*/
+.subscribe {
+    width: 50%; height: auto; margin: auto;  z-index: 999; position: absolute; top: 15%; bottom: 0; left: 0; right: 0;
+}
+.form-subscribe {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 50%;
+    padding-top: 2em;
+    display: inline-flex;
+    max-width: 100%;
+}
+.input {
+    padding: 16px 20px;
+    font-size: 15px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex: 1;
+    outline-width: 0px;
+    outline-color: transparent;
+    vertical-align: middle;
+    color: #1a2633;
+    background-color: #fff;
+    border: 1px solid transparent;
+    outline: none;
+}
+.btn {
+    white-space: nowrap;
+    background-color: #1a92d0;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 .section {
     position: relative;
     color: white;
@@ -272,7 +310,13 @@ section ul li{
 .home .svg {
     bottom: 0;
 }
-
+.desktop-communities .svg {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
 .services {
     background-color: #62b030;
 }
@@ -280,23 +324,14 @@ section ul li{
 .desktop-services {
     position: relative;
     height: 100%;
-    width: 100%;
+    margin-right: 3em;
 }
 .mobile-services img {
     height: auto;
     width: 100%;
     max-height: 100%;
 }
-@media(max-width: 768px) {
-    .desktop-services {
-        display: none;
-    }    
-}
-@media(min-width: 769px) {
-    .mobile-services {
-        display: none;
-    }
-}
+
 
 @media(min-width: 1670px) and (max-height: 960px) {
     #MongolFiere1 {
@@ -315,6 +350,34 @@ section ul li{
 }
 .communities{
     background-color: #1a92d0;
+}
+
+.desktop-communities {
+    height: 100%;
+    position: relative;
+    padding-right: 3em;
+}
+.phone-overlay-desktop {
+    position: absolute;
+    color: black;
+    background-color: grey;
+    z-index: 4;
+}
+.phone-logo {
+    height: auto;
+    position: absolute;
+    z-index: 3;
+}
+
+#phone path {
+    z-index: 999;
+}
+
+#inner-phone {
+    z-index: 2;
+}
+.mobile-communities {
+
 }
 
 .team{
