@@ -127,6 +127,11 @@ $(function () {
         console.log('mouseleave icone');
         $('#overlay').css({ left: innerPhoneBox.left - innerPhoneBox.width, transition: "1s" });
     });
+    $('.round').hover(function () {
+        console.log('hover')
+    }, function () {
+
+    });
     $(".pagination-custom a").on("click", $.scrollify.move);
 });
 

@@ -51,3 +51,10 @@
 	-webkit-transition: stroke-dashoffset 0.8s, fill 0.8s;
 	transition: stroke-dashoffset 0.8s, fill 0.8s;
 }
+
+.tooltip-content-globe {
+	opacity: 1;
+    pointer-events: auto;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}

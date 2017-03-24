@@ -392,7 +392,14 @@ section ul li{
 .mobile-communities {
 
 }
+.global {
+    background-color: #F8C060;
+}
 
+.global .svg {
+    height: 100%;
+    width: 100%;
+}
 .team{
     width: 100vw;
     height:100%;
