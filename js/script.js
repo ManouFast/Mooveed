@@ -42,12 +42,62 @@ function resizePhone() {
     innerPhoneBox = innerPhone.getBoundingClientRect();
     $('.phone-logo').css({ top: innerPhoneBox.top + innerPhoneBox.height / 4, left: innerPhoneBox.left, width: innerPhoneBox.width, height: 'auto' });
 }
+
+function statusHandler(status) {
+    status = parseInt(status);
+    var result;
+    switch (status) {
+        case 403:
+            result = "Entrez une adresse mail valide";
+            break;
+        case 400:
+            result = "Vous êtes déjà inscrit à notre newsletter";
+            break;
+        case 200:
+            result = "Vous n'avez plus qu'à confirmer par mail :)";
+            break;
+    }
+    return result;
+}
+
+function subscribeHandler(status) {
+    var message = statusHandler(status);
+    $('#subscribeMessage').text(message);
+    $('.subscribe-message').removeClass('closed');
+    setTimeout(function () {
+        $('.subscribe-message').addClass('closed');
+    }, 1000);
+}
+function emailValidator(email) {
+    var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    return pattern.test(email);
+}
 // Scrolling page -> jQuery Easing plugin
 $(function () {
     //collapseNavbar();
     //$(window).scroll(collapseNavbar);
     // Responsive Menu
     //$(window).resize(resizePhone);
+    $('#submit-subscribe').click(function () {
+        var email = $('#email').val();
+        if (emailValidator(email)) {
+            $.ajax({
+                url: './php/check.php',
+                data: {email: email},
+                type: 'POST',
+                success: function (msg) {
+                    var status = msg.split(':');
+                    status = parseInt(status[0]);
+                    if (!status) {
+                        status = 200;
+                    }
+                    subscribeHandler(status);
+                }
+            });
+        } else {
+            subscribeHandler(403);
+        }
+    });
     $('.navbar-collapse ul li a').click(function () {
         if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
             $('.navbar-toggle:visible').click();
