@@ -3,7 +3,7 @@
 	pointer-events: none;
     color: black;
     position: absolute;
-    padding: 1em;
+    padding: 2em;
 	z-index: 100;
 	opacity: 0;
 	font-size: 1.05em;
@@ -28,8 +28,8 @@
 /* Shape */
 .tooltip-shape {
 	position: absolute;
-	width: 50%;
-    left: 25%;
+	width: 76%;
+    left: 10%;
 	bottom: calc(100% - 30px);
 	pointer-events: none;
 }
@@ -67,11 +67,8 @@
 }
 
 @media (min-width: 761px) {
-    .tooltip-content-globe {
-        width: 400px;
-    }
     .tooltip-content-globe-mobile {
-        width: 400px !important;
+        width: 350px !important;
     }
 }
 
@@ -141,7 +138,7 @@
 	-webkit-font-smoothing: antialiased;
     color: white;
     background: transparent;
-	width: 150px;
+	width: 250px;
     overflow: hidden;
 	-webkit-transition: opacity 0.3s 0.3s;
     transition: opacity 0.3s 0.3s;
