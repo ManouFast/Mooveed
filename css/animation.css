@@ -38,7 +38,7 @@
         transform: translateX(-1000px)
     }
     100% {
-        transform: translateX(200%)
+        transform: translateX(300%)
     }
 }
 
@@ -47,13 +47,13 @@
         transform: translateX(-1000px)
     }
     100% {
-        transform: translateX(200%)
+        transform: translateX(300%)
     }
 }
 
 @keyframes animateCloud {
     0% {
-        transform: translateX(-1000px)
+        transform: translateX(-200%)
     }
     100% {
         transform: translateX(200%)

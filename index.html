@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mooveed - Travel whitout limits</title>
     <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="fonts/affogato.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/tooltip.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <svg class="svg" id="header-svg" data-name="header-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1925 1200">
+       <svg class="svg" id="header-svg" data-name="header-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1925 1200">
             <defs>
                 <style>
                     .cls-1 {
@@ -400,7 +400,7 @@
                 <path class="cls-12" d="M1556.38,151.82c8.79-5.95,17.25-6.51,27.11-4.06,3.18.79,12.19.11,16.06,2-.35-4.62-13.81-3.24-17.85-4.25-9.86-2.45-18.32-1.89-27.11,4.06-3.68,2.49-1.57,3.91-.22,4.48.14-.62.71-1.37,2-2.26Z"
                 />
             </g>
-        </svg>
+        </svg>>
     </header>
     <section class="section global" data-section-name="global">
         <!--<div class="services-container desktop-services">
@@ -5567,15 +5567,37 @@
                     class="glob-638" />
                 <path d="M414.23 540.47a.28.28 0 0 0 .27.29v-.58a.28.28 0 0 0-.27.29z" class="glob-637" />
                 <ellipse cx="370.06" cy="532" class="glob-11" rx="5.94" ry="6.37" />
-
             </g>
-
         </svg>
-        <span class="tooltip-content-globe">
-            <span class="tooltip-text">
-                <span class="tooltip-inner">Howdy, Ben!<br /> There are 13 unread messages in your inbox.</span>
+        <span class="tooltip-content-globe-mobile" id="globeTooltipMobile">
+            <span class="tooltip-text-mobile">
+                <span class="tooltip-inner-mobile">
+                        There are 13 unread messages in your inbox.
+                    </span>
             </span>
         </span>
+        <div class="tooltip-content-globe" id="globeTooltipPeople" style="display: none">
+            <div class="tooltip-text">
+                <span class="tooltip-inner">
+                        There are 13 unread messages in your inbox.
+                    </span>
+            </div>
+        </div>
+        <div class="tooltip-content-globe" id="globeTooltipSablier" style="display: none">
+            <div class="tooltip-text">
+                <span class="tooltip-inner">
+                        There are 13 unread messages in your inbox.
+                    </span>
+            </div>
+        </div>
+        <div class="tooltip-content-globe" id="globeTooltipRefresh" style="display: none">
+            <div class="tooltip-text">
+                <span class="tooltip-inner">
+                        There are 13 unread messages in your inbox.
+                    </span>
+            </div>
+        </div>
+
     </section>
     <!-- Services Section -->
     <section class="section services" data-section-name="services">
@@ -5586,13 +5608,10 @@
             <li><a class="" href="#communities"><span class="hover-text">Communities</span></a></li>
             <li><a class="" href="#team"><span class="hover-text">Team</span></a></li>
         </ul>
-        <!--<div class="services-container desktop-services">
-            <img src="img/services/services.png">
-        </div>-->
         <div class="services-container mobile-services">
-            <img src="img/services/service.mobile_1.svg">
-            <img src="img/services/service.mobile_2.svg">
-            <img src="img/services/service.mobile_3.svg">
+            <object data="img/services/service.mobile_1.svg" type="image/svg+xml"></object>
+            <object data="img/services/service.mobile_2.svg" type="image/svg+xml"></object>
+            <object data="img/services/service.mobile_3.svg" type="image/svg+xml"></object>
         </div>
     </section>
     <!-- close about -->
@@ -8128,7 +8147,7 @@
             <div class="tooltip tooltip-effect">
                 <img src="img/team/clement.svg">
                 <div class="tooltip-shape">
-                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <span class="tooltip-content">Today we have an interesting typographic challenge... blablablablabla</span>
                     <svg viewBox="0 0 200 150" preserveAspectRatio="none">
                         <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
                         />
@@ -8138,7 +8157,7 @@
             <div class="tooltip tooltip-effect">
                 <img src="img/team/jb.svg">
                 <div class="tooltip-shape">
-                    <span class="tooltip-content">Today we have an interesting typographic challenge...</span>
+                    <span class="tooltip-content">Récemment diplômé en Ingénierie informatique</span>
                     <svg viewBox="0 0 200 150" preserveAspectRatio="none">
                         <polygon points="29.857,3.324 171.111,3.324 196.75,37.671 184.334,107.653 104.355,136.679 100,146.676 96.292,136.355 16.312,107.653 3.25,37.671"
                         />
@@ -8150,7 +8169,6 @@
     <footer>
     </footer>
     <script src="js/jquery.js"></script>
-    <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="js/jquery.scrollify.min.js"></script>
     <script src="js/script.js"></script>
 </body>
